@@ -15,6 +15,34 @@ If you wish to support this project, <a href='https://www.paypal.com/cgi-bin/web
 
 # Quick Start
 
+## Docker
+
+Docker image: `ismaail/wwwsqldesigner:latest`
+
+Docker Environments:
+
+```
+environment:
+    - IMPORT_DB_HOST=
+    - IMPORT_DB_USER=root
+    - IMPORT_DB_PASSWORD=
+    - SAVE_DB_HOST=
+    - SAVE_DB_USER=
+    - SAVE_DB_PASSWORD=
+    - SAVE_DB_DATABASE=
+```
+
+Create the Save table
+
+```sql
+CREATE TABLE `wwwsqldesigner` (
+    `keyword` varchar(30) NOT NULL default '',
+    `data` mediumtext,
+    `dt` timestamp,
+    PRIMARY KEY  (`keyword`)
+);
+```
+
 ## Local Installation:
 
 1. `npm install http-server -g`

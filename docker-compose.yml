@@ -1,0 +1,8 @@
+version: "2"
+
+services:
+    wwwsqldesigner:
+        image: ismaail/wwwsqldesigner:latest
+        build:
+            context: ./
+            dockerfile: ./Dockerfile
