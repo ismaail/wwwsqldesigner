@@ -24,6 +24,7 @@ Docker Environments:
 ```
 environment:
     - IMPORT_DB_HOST=
+    - IMPORT_DB_NAME=
     - IMPORT_DB_USER=root
     - IMPORT_DB_PASSWORD=
     - SAVE_DB_HOST=
