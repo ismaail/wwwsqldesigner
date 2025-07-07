@@ -1,8 +1,8 @@
 FROM php:7-apache
 
-RUN apt-get update \
-    && apt-get install -y libpq-dev \
-    && docker-php-ext-install pgsql
+ADD --chmod=0755 https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
+
+RUN install-php-extensions mysqli pdo_pgsql pdo_mysql
 
 RUN sed -i 's/Listen 80/Listen ${PORT}/' /etc/apache2/ports.conf
 
